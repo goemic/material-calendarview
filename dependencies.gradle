@@ -7,6 +7,7 @@ ext {
   junitVersion = '4.12'
   runnerVersion = '0.5'
   supportVersion = '27.0.2'
+  android_desugarJdkLibs = "1.1.6"
 
   supportV4 = "com.android.support:support-v4:$supportVersion"
   supportDesign = "com.android.support:design:$supportVersion"
@@ -25,7 +26,6 @@ ext {
   hamcrestIntegration = "org.hamcrest:hamcrest-integration:$hamcrestVersion"
 
   // Other
-  threeTenAbp = 'com.jakewharton.threetenabp:threetenabp:1.1.1'
   butterknife = 'com.jakewharton:butterknife:8.5.1'
   butterknifeCompiler = 'com.jakewharton:butterknife-compiler:8.5.1'
 
