@@ -29,7 +29,7 @@ android {
   }
 }
 
-group = "com.github.prolificinteractive"
+group = "com.github.goemic"
 version = android.defaultConfig.versionName
 archivesBaseName = 'material-calendarview'
 
