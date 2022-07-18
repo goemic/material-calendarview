@@ -1,6 +1,6 @@
 package com.prolificinteractive.materialcalendarview;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

@@ -10,11 +10,10 @@ ext {
   android_desugarJdkLibs = "1.1.6"
 
   jdkDesugaring = "com.android.tools:desugar_jdk_libs:$android_desugarJdkLibs"
-  supportV4 = "com.android.support:support-v4:$supportVersion"
   supportDesign = "com.android.support:design:$supportVersion"
-  supportAnnotations = "com.android.support:support-annotations:$supportVersion"
-  supportAppCompat = "com.android.support:appcompat-v7:$supportVersion"
-  recyclerviewV7 = "com.android.support:recyclerview-v7:$supportVersion"
+  supportAnnotations = 'androidx.annotation:annotation:1.0.0'
+  supportAppCompat = 'androidx.appcompat:appcompat:1.0.0'
+  recyclerviewV7 = 'androidx.recyclerview:recyclerview:1.0.0'
 
   // Test
   junit = "junit:junit:$junitVersion"
@@ -27,8 +26,8 @@ ext {
   hamcrestIntegration = "org.hamcrest:hamcrest-integration:$hamcrestVersion"
 
   // Other
-  butterknife = 'com.jakewharton:butterknife:8.5.1'
-  butterknifeCompiler = 'com.jakewharton:butterknife-compiler:8.5.1'
+  butterknife = 'com.jakewharton:butterknife:10.2.3'
+  butterknifeCompiler = 'com.jakewharton:butterknife-compiler:10.2.3'
 
   testDep = [junit,
              hamcrestCore,

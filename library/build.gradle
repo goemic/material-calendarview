@@ -37,7 +37,6 @@ dependencies {
 
   // support for the new language APIs (e.g. java.time)
   coreLibraryDesugaring  rootProject.ext.jdkDesugaring
-  implementation rootProject.ext.supportV4
   implementation rootProject.ext.supportAppCompat
   implementation rootProject.ext.supportAnnotations
 
