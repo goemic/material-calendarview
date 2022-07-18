@@ -36,7 +36,7 @@ archivesBaseName = 'material-calendarview'
 dependencies {
 
   // support for the new language APIs (e.g. java.time)
-  coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:$android_desugarJdkLibs"
+  coreLibraryDesugaring  rootProject.ext.jdkDesugaring
   implementation rootProject.ext.supportV4
   implementation rootProject.ext.supportAppCompat
   implementation rootProject.ext.supportAnnotations
