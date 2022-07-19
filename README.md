@@ -1,7 +1,10 @@
+# This fork contains a java.time migration with Java 8+ API desugaring enabled!!
+
+
 <img src="/images/hero.png"/>
 
 # Material Calendar View 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Calendar%20View-blue.svg?style=flat)](https://android-arsenal.com/details/1/1531) [![](https://jitpack.io/v/prolificinteractive/material-calendarview.svg)](https://jitpack.io/#prolificinteractive/material-calendarview) [![Travis branch](https://img.shields.io/travis/prolificinteractive/material-calendarview.svg?maxAge=2592000)](https://travis-ci.org/prolificinteractive/material-calendarview)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Calendar%20View-blue.svg?style=flat)](https://android-arsenal.com/details/1/1531) [![](https://jitpack.io/v/goemic/material-calendarview.svg)](https://jitpack.io/#goemic/material-calendarview) [![Travis branch](https://img.shields.io/travis/prolificinteractive/material-calendarview.svg?maxAge=2592000)](https://travis-ci.org/prolificinteractive/material-calendarview)
 
 A Material design back port of Android's CalendarView. The goal is to have a Material look
 and feel, rather than 100% parity with the platform's implementation.
@@ -21,12 +24,29 @@ allprojects {
 }
 ```
 
-Step 2. Add the dependency
+Step 2. Add this to your app/module level build.gradle
 
-```groovy
-dependencies {
-  implementation 'com.github.prolificinteractive:material-calendarview:${version}'
+```
+android {
+  
+  compileOptions {
+    // Flag to enable support for the new language APIs
+    coreLibraryDesugaringEnabled true
+    
+    // Sets Java compatibility to Java 8
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 }
+
+dependencies {
+  // enable desugaring
+  coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:<latest-version>'
+  
+  // the actual library
+  implementation 'com.github.goemic:material-calendarview:3.0.0'
+}
+
 ```
 
 ## Usage
@@ -72,6 +92,11 @@ One of the aims of this library is to be customizable. The many options include:
 All of this and more can be done via the decorator api. Please check out the [decorator documentation](https://github.com/prolificinteractive/material-calendarview/wiki/Decorators).
 
 ## Recent Changes
+
+### Major Change in 3.0
+
+Material CalendarView uses now java.time instead of [ThreeTen Android Backport](https://github.com/JakeWharton/ThreeTenABP). Therefore, [Java 8+ API desugaring is enabled](https://developer.android.com/studio/write/java8-support#library-desugaring). 
+Furthermore, the library is migrated to androidx.
 
 ### Major Change in 2.0
 
